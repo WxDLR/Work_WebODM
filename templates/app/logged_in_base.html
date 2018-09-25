@@ -250,7 +250,7 @@
 
                 {% if view_nodes %}
                 <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Processing Nodes（解算节点）<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i>处理节点<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         {% for node in nodes %}
                         <li>
@@ -260,7 +260,7 @@
 
                         {% if add_nodes %}
                         <li>
-                            <a href="{% url 'admin:nodeodm_processingnode_add' %}"><span class="fa fa-plus-circle"></span> Add New（添加新节点）</a>
+                            <a href="{% url 'admin:nodeodm_processingnode_add' %}"><span class="fa fa-plus-circle"></span>添加新节点</a>
                         </li>
                         {% endif %}
                     </ul>
