@@ -1,0 +1,29 @@
+{% extends "app/plugins/templates/base.html" %}
+
+
+{% block content %}
+    <h3><i class="oam-icon fa"></i> OpenAerialMap</h3>
+
+
+
+{% if not form.token.value %}
+    <p>(OAM)是一套用于搜索、共享和使用公开许可的卫星和无人机图像的工具</p>
+    <p>通过OAM分享你的成果:</p>
+    <ol>
+        <li>通过<a href="https://map.openaerialmap.org" target="_blank">map.openaerialmap.org</a>注册.</li>
+        <li>导航到您的OAM概要页面(单击用户的头像)并按下请求第三方API令牌按钮</li>
+        <li>复制并粘贴下面表单中的令牌.</li>
+    </ol>
+    {% else %}
+        <p><b>设置完成</b> 通过<a href="/dashboard/">dashboard</a>点击<b>分享至OAM</b>按钮分享您的作品.</p>
+        <p>您可以通过OAM概要页面管理您的上传数据</p>
+        <p><a class="btn btn-sm btn-default" href="https://map.openaerialmap.org" target="_blank"><i class="fa fa-external-link"></i>进入OpenAerialMap</a></p>
+    {% endif %}
+
+    <form action="" method="post" class="oam-form oam-token-form">
+        <h4>口令设置</h4>
+        {% csrf_token %}
+        {% include "app/plugins/templates/form.html" %}
+        <button type="submit" class="btn btn-primary"><i class="fa fa-save fa-fw"></i>设置口令</i></button>
+    </form>
+{% endblock %}

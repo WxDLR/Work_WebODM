@@ -157,7 +157,7 @@ class Task(models.Model):
     console_output = models.TextField(null=False, default="", blank=True, help_text="OpenDroneMap进程的控制台输出")
     ground_control_points = models.FileField(null=True, blank=True, upload_to=gcp_directory_path, help_text="处理时可选的GCP文件")
 
-    orthophoto_extent = GeometryField(null=True, blank=True, srid=4326, help_text="OpenDroneMap创建的正射影图的范围")
+    orthophoto_extent = GeometryField(null=True, blank=True, srid=4326, help_text="OpenDroneMap创建的正视图的范围")
     dsm_extent = GeometryField(null=True, blank=True, srid=4326, help_text="OpenDroneMap创建的DSM的范围")
     dtm_extent = GeometryField(null=True, blank=True, srid=4326, help_text="OpenDroneMap创建的DTM的范围")
 
