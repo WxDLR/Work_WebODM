@@ -221,11 +221,11 @@
 {% block registration_content %}
     {% if firstuserform.errors %}
         <div class="alert alert-warning">
-            <p>{% trans "Uh oh! Could you please check the errors below?(请检查以下错误？)" %}</p>
+            <p>{% trans "Uh oh!请检查以下错误" %}</p>
         </div>
     {% else %}
-        <h3>{% trans 'Welcome! ☺(欢迎)' %}</h3>
-        <div style="margin-bottom: 28px;">Before we get started, we need to create an administrator account for you:(在我们开始之前，我们需要给你创建一个管理员账户)</div>
+        <h3>{% trans '欢迎! ☺' %}</h3>
+        <div style="margin-bottom: 28px;">在开始之前，我们需要创建一个管理员账户：</div>
     {% endif %}
 
     <form action="" method="post" class="form-horizontal" role="form">{% csrf_token %}
@@ -234,7 +234,7 @@
         {% endfor %}
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-default">{% trans 'Create Account(创建账户)' %}</button>
+              <button type="submit" class="btn btn-default">{% trans '创建账户' %}</button>
             </div>
         </div>
     </form>

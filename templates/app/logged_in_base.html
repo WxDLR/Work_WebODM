@@ -221,7 +221,7 @@
                     </div>
                 </li>-->
                 <li>
-                    <a href="/dashboard/"><i class="fa fa-dashboard fa-fw"></i> {% trans 'Dashboard（菜单）' %}</a>
+                    <a href="/dashboard/"><i class="fa fa-dashboard fa-fw"></i> {% trans '菜单' %}</a>
                 </li>
                 <!--<li>
                     <a href="#"><i class="fa fa-plane fa-fw"></i> Mission Planner</a>
@@ -270,22 +270,22 @@
 
                 {% if user.is_staff %}
                 <li>
-                    <a href="/admin/"><i class="fa fa-gears fa-fw"></i> {% trans 'Administration（后台管理）' %}</a>
+                    <a href="/admin/"><i class="fa fa-gears fa-fw"></i> {% trans '后台管理' %}</a>
                 </li>
                 {% endif %}
                 <li>
-                    <a href="/api/"><i class="fa fa-book fa-fw"></i> {% trans 'API(应用程序接口))' %}</a>
+                    <a href="/api/"><i class="fa fa-book fa-fw"></i> {% trans 'API' %}</a>
                 </li>
 
                 {% if user.is_staff %}
                 <li>
-                    <a href="#"><i class="fa fa-magic fa-fw"></i> {% trans 'Customize(定制)' %}<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-magic fa-fw"></i> {% trans '个性化' %}<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="{% url 'admin:app_setting_change' SETTINGS.id %}"><i class="fa fa-hand-o-right"></i> {% trans 'Brand(铭牌)' %}</a>
+                            <a href="{% url 'admin:app_setting_change' SETTINGS.id %}"><i class="fa fa-hand-o-right"></i> {% trans '铭牌' %}</a>
                         </li>
                         <li>
-                            <a href="{% url 'admin:app_theme_change' SETTINGS.theme.id %}"><i class="fa fa-paint-brush"></i> {% trans 'Theme(主题)' %}</a>
+                            <a href="{% url 'admin:app_theme_change' SETTINGS.theme.id %}"><i class="fa fa-paint-brush"></i> {% trans '主题' %}</a>
                         </li>
                     </ul>
                 </li>

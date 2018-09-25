@@ -12,12 +12,12 @@
 	<![endif]-->
 
 	{% if no_processingnodes %}
-		<h3>{% trans 'Welcome!(欢迎) ☺' %}</h3>
-		{% trans 'Add a Processing Node(添加解算节点)' as add_processing_node %}
+		<h3>{% trans '欢迎 ☺' %}</h3>
+		{% trans '添加解算节点' as add_processing_node %}
 		{% with nodeodm_link='<a href="https://github.com/pierotofy/node-OpenDroneMap" target="_blank">node-OpenDroneMap(ODM节点)</a>' api_link='<a href="https://github.com/pierotofy/node-OpenDroneMap/blob/master/docs/index.adoc" target="_blank">API</a>' %}
 			<p>
 			{% blocktrans %} 
-				To get started, "{{ add_processing_node }}". A processing node is a computer running an instance of {{ nodeodm_link }} or some other software that implements this {{ api_link }}.
+				启动 "{{ add_processing_node }}"。处理节点是电脑正在运行{{ nodeodm_link }}的一个实例，或者是实现{{ api_link }}的软件。
 			{% endblocktrans %}
 			</p>
 		{% endwith %}
@@ -26,17 +26,17 @@
 	{% else %}
 		
 		{% if no_tasks %}
-			<h3>{% trans 'Welcome! ☺(欢迎)' %}</h3>
-			{% trans 'Select Images and GCP(选择图片及GCP)' as upload_images %}
+			<h3>{% trans '欢迎！ ☺' %}</h3>
+			{% trans '选择图片及GCP' as upload_images %}
 			<p>
-				{% blocktrans %} To create a map, press the(要创建一个地图，请先点击) "{{ upload_images }}" (按钮，或者拖拽图片至项目)button, or drag and drop some images into a project. {% endblocktrans %}
+				{% blocktrans %} 要创建一个地图，请先点击"{{ upload_images }}"按钮，或者拖拽图片至项目。{% endblocktrans %}
 			</p>
 			<p>
 				<ul>
-					<li>{% trans 'You need at least 5 images(请选择至少五张图片)' %}</li>
-					<li>{% trans 'Images must overlap by 65% or more(图片重合度至少在65%以上))' %}</li>
-					<li>{% trans 'For great 3D, images must overlap by 83%(若想获取更好的3D效果，图片重合度至少在83%以上)' %}</li>
-					<li>{% trans 'A <a href="https://github.com/OpenDroneMap/OpenDroneMap/wiki/Running-OpenDroneMap#running-odm-with-ground-control" target="_blank">GCP file(GCP文件)</a> (不是不是必须的)is optional, (但可以提高影像匹配的精准度)but can increase georeferencing accuracy' %}</li>
+					<li>{% trans '请选择至少五张图片' %}</li>
+					<li>{% trans '图片重合度至少在65%以上' %}</li>
+					<li>{% trans '若想获取更好的3D效果，图片重合度至少在83%以上' %}</li>
+					<li>{% trans 'A <a href="https://github.com/OpenDroneMap/OpenDroneMap/wiki/Running-OpenDroneMap#running-odm-with-ground-control" target="_blank">GCP file(GCP文件)</a>不是不是必须的，但可以提高影像匹配的精准度。' %}</li>
 				</ul>
 			</p>
 		{% endif %}

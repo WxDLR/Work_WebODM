@@ -18,7 +18,7 @@
 {% block content %}
 {% if form.errors and not form.non_field_errors %}
 <p class="errornote">
-{% if form.errors.items|length == 1 %}{% trans "Please correct the error below.(请更正以下错误)" %}{% else %}{% trans "Please correct the errors below.(请更正以下错误)" %}{% endif %}
+{% if form.errors.items|length == 1 %}{% trans "请更正以下错误" %}{% else %}{% trans "请更正以下错误" %}{% endif %}
 </p>
 {% endif %}
 
@@ -35,9 +35,7 @@
 {% if user.is_authenticated %}
 <p class="errornote">
 {% blocktrans trimmed %}
-    You are authenticated as {{ username }}, but are not authorized to
-    access this page. Would you like to login to a different account?
-    (您的登录账户为{{ username }},但并未授权访问此页面。您愿意切换账户登入吗？
+    您当前登录的账户{{ username }}无权访问此页面！！
 {% endblocktrans %}
 </p>
 {% endif %}
@@ -55,11 +53,11 @@
   {% url 'admin_password_reset' as password_reset_url %}
   {% if password_reset_url %}
   <div class="password-reset-link">
-    <a href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?(忘记账户或密码？)' %}</a>
+    <a href="{{ password_reset_url }}">{% trans '忘记账户或密码？' %}</a>
   </div>
   {% endif %}
   <div class="submit-row">
-    <label>&nbsp;</label><input type="submit" value="{% trans 'Log in(登录)' %}" />
+    <label>&nbsp;</label><input type="submit" value="{% trans '登录' %}" />
   </div>
 </form>
 

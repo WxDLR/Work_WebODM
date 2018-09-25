@@ -8,34 +8,34 @@
 
 <table class="table table-bordered table-striped table-first-col-bold processing-node-info">
 	<tr>
-		<td>{% trans "Hostname(主机名)" %}</td>
+		<td>{% trans "主机名" %}</td>
 		<td>{{ processing_node.hostname }}</td>
 	</tr>
 	<tr>
-		<td>{% trans "Port(端口号)" %}</td>
+		<td>{% trans "端口号" %}</td>
 		<td>{{ processing_node.port }}</td>
 	</tr>
 	<tr>
-		<td>{% trans "API Version(API版本)" %}</td>
+		<td>{% trans "API 版本" %}</td>
 		<td>{{ processing_node.api_version }}</td>
 	</tr>
 	<tr>
-		<td>{% trans "Queue Count(节点队列数量)" %}</td>
+		<td>{% trans "节点队列数量" %}</td>
 		<td>{{ processing_node.queue_count }}</td>
 	</tr>
 	<tr>
-		<td>{% trans "Last Refreshed(上次刷新时间)" %}</td>
-		<td>{{ processing_node.last_refreshed|timesince }} {% trans 'ago(历史)' %} ({{ processing_node.last_refreshed|localtime }})</td> <!-- TODO: timezone? -->
+		<td>{% trans "上次刷新时间" %}</td>
+		<td>{{ processing_node.last_refreshed|timesince }} {% trans '历史' %} ({{ processing_node.last_refreshed|localtime }})</td> <!-- TODO: timezone? -->
 	</tr>
 	<tr>
-		<td>{% trans "Options (JSON)(JSON选项))" %}</td>
+		<td>{% trans "自定义JSON选项" %}</td>
 		<td><div data-console data-console-lang="js" data-console-height="300">{{ available_options_json}}</div></td>
 	</tr>
 </table>
 {% if user.is_superuser %} 
 <div class="text-center">
-	<button class="btn btn-default" onclick="location.href='{% url "admin:nodeodm_processingnode_change" processing_node.id %}';"><i class="glyphicon glyphicon-pencil"></i> {% trans "Edit(编辑)" %}</button>
-	<button class="btn btn-danger" onclick="location.href='{% url "admin:nodeodm_processingnode_delete" processing_node.id  %}';"><i class="glyphicon glyphicon-trash"></i> {% trans "Delete(删除)" %}</button>
+	<button class="btn btn-default" onclick="location.href='{% url "admin:nodeodm_processingnode_change" processing_node.id %}';"><i class="glyphicon glyphicon-pencil"></i> {% trans "编辑" %}</button>
+	<button class="btn btn-danger" onclick="location.href='{% url "admin:nodeodm_processingnode_delete" processing_node.id  %}';"><i class="glyphicon glyphicon-trash"></i> {% trans "删除" %}</button>
 </div>
 {% endif %}
 

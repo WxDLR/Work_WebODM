@@ -6,7 +6,7 @@
 {% if not is_popup %}
 {% block breadcrumbs %}
 <div class="breadcrumbs">
-<a href="{% url 'admin:index' %}">{% trans 'Home(主页)' %}</a>
+<a href="{% url 'admin:index' %}">{% trans '主页' %}</a>
 &rsaquo;
 {% for app in app_list %}
 {{ app.name }}

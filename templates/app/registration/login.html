@@ -4,7 +4,7 @@
 {% block registration_content %}
     {% if form.errors %}
         <div class="alert alert-warning">
-            <p><strong>{% trans "Invalid credentials.(无效的证书)" %}</strong> {% trans "Note that both fields are case-sensitive.(注意区分大小写)" %}</p>
+            <p><strong>{% trans "无效的证书" %}</strong> {% trans "注意区分大小写" %}</p>
         </div>
     {% endif %}
     <form action="{% url 'login' %}" method="post" class="form-horizontal" role="form">{% csrf_token %}
@@ -13,10 +13,10 @@
         {% endfor %}
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-default">{% trans 'Log in(登入)' %}</button>
+              <button type="submit" class="btn btn-default">{% trans '登入' %}</button>
             </div>
             <div class="top-buffer col-sm-offset-2 col-sm-10">
-              <!--<p><a href="{% url 'password_reset' %}">{% trans "Reset My Password(充值密码)" %}</a></p>-->
+              <!--<p><a href="{% url 'password_reset' %}">{% trans "重置密码" %}</a></p>-->
                 <p><a href="javascript:toggleForgotPasswordHint();">Forgot your password?</a></p>
                 <script>function toggleForgotPasswordHint(){ $("#forgotPasswordHint").toggle(); }</script>
                 <div id="forgotPasswordHint" style="display: none; font-size: 90%; padding: 4px;" class="theme-secondary">

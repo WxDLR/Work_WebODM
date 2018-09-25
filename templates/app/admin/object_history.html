@@ -3,11 +3,11 @@
 
 {% block breadcrumbs %}
 <div class="breadcrumbs">
-<a href="{% url 'admin:index' %}">{% trans 'Home(主页)' %}</a>
+<a href="{% url 'admin:index' %}">{% trans '主页' %}</a>
 &rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
 &rsaquo; <a href="{% url opts|admin_urlname:'changelist' %}">{{ module_name }}</a>
 &rsaquo; <a href="{% url opts|admin_urlname:'change' object.pk|admin_urlquote %}">{{ object|truncatewords:"18" }}</a>
-&rsaquo; {% trans 'History(历史)' %}
+&rsaquo; {% trans '历史' %}
 </div>
 {% endblock %}
 
@@ -19,9 +19,9 @@
     <table id="change-history">
         <thead>
         <tr>
-            <th scope="col">{% trans 'Date/time(日期/时间)' %}</th>
-            <th scope="col">{% trans 'User(用户)' %}</th>
-            <th scope="col">{% trans 'Action(功能/行为？)' %}</th>
+            <th scope="col">{% trans '日期/时间' %}</th>
+            <th scope="col">{% trans '用户' %}</th>
+            <th scope="col">{% trans '功能/行为？' %}</th>
         </tr>
         </thead>
         <tbody>
@@ -35,7 +35,7 @@
         </tbody>
     </table>
 {% else %}
-    <p>{% trans "This object doesn't have a change history. It probably wasn't added via this admin site.(此对象无更改历史，它可能并非通过此站点添加)" %}</p>
+    <p>{% trans "此对象无更改历史，它可能并非通过此站点添加。" %}</p>
 {% endif %}
 </div>
 </div>

@@ -14,9 +14,9 @@
    {% if header.sortable %}
      {% if header.sort_priority > 0 %}
        <div class="sortoptions">
-         <a class="sortremove" href="{{ header.url_remove }}" title="{% trans "Remove from sorting(根据排序删除))" %}"></a>
-         {% if num_sorted_fields > 1 %}<span class="sortpriority" title="{% blocktrans with priority_number=header.sort_priority %}Sorting priority: {{ priority_number }}{% endblocktrans %}">{{ header.sort_priority }}</span>{% endif %}
-         <a href="{{ header.url_toggle }}" class="toggle {% if header.ascending %}ascending{% else %}descending{% endif %}" title="{% trans "Toggle sorting(切换排序方式)" %}"></a>
+         <a class="sortremove" href="{{ header.url_remove }}" title="{% trans "根据排序删除" %}"></a>
+         {% if num_sorted_fields > 1 %}<span class="sortpriority" title="{% blocktrans with priority_number=header.sort_priority %}排序优先级: {{ priority_number }}{% endblocktrans %}">{{ header.sort_priority }}</span>{% endif %}
+         <a href="{{ header.url_toggle }}" class="toggle {% if header.ascending %}ascending{% else %}descending{% endif %}" title="{% trans "切换排序方式" %}"></a>
        </div>
      {% endif %}
    {% endif %}

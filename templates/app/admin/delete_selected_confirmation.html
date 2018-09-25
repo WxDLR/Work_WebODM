@@ -10,32 +10,32 @@
 
 {% block breadcrumbs %}
 <div class="breadcrumbs">
-<a href="{% url 'admin:index' %}">{% trans 'Home(主页)' %}</a>
+<a href="{% url 'admin:index' %}">{% trans '主页' %}</a>
 &rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
 &rsaquo; <a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
-&rsaquo; {% trans 'Delete multiple objects(删除关联对象)' %}
+&rsaquo; {% trans '删除关联对象' %}
 </div>
 {% endblock %}
 
 {% block content %}
 {% if perms_lacking %}
-    <p>{% blocktrans %}Deleting the selected(删除) {{ objects_name }} (会导致关联数据也被删除，但你没有权限删除以下项目：)would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:{% endblocktrans %}</p>
+    <p>{% blocktrans %}删除{{ objects_name }}会导致关联数据也被删除，但你没有权限删除以下项目：{% endblocktrans %}</p>
     <ul>
     {% for obj in perms_lacking %}
         <li>{{ obj }}</li>
     {% endfor %}
     </ul>
 {% elif protected %}
-    <p>{% blocktrans %}Deleting the selected(删除项对象) {{ objects_name }} (需要删除以下受保护的关联对象)would require deleting the following protected related objects:{% endblocktrans %}</p>
+    <p>{% blocktrans %}删除项对象{{ objects_name }}需要删除以下受保护的关联对象{% endblocktrans %}</p>
     <ul>
     {% for obj in protected %}
         <li>{{ obj }}</li>
     {% endfor %}
     </ul>
 {% else %}
-    <p>{% blocktrans %}Are you sure you want to delete the selected(你确定你要删除) {{ objects_name }}? All of the following objects and their related items will be deleted:(以下所有关联项目都将被删除){% endblocktrans %}</p>
+    <p>{% blocktrans %}(你确定你要删除{{ objects_name }}?以下所有关联项目都将被删除{% endblocktrans %}</p>
     {% include "admin/includes/object_delete_summary.html" %}
-    <h2>{% trans "Objects(对象)" %}</h2>
+    <h2>{% trans "对象" %}</h2>
     {% for deletable_object in deletable_objects %}
         <ul>{{ deletable_object|unordered_list }}</ul>
     {% endfor %}
@@ -46,8 +46,8 @@
     {% endfor %}
     <input type="hidden" name="action" value="delete_selected" />
     <input type="hidden" name="post" value="yes" />
-    <input type="submit" value="{% trans "Yes, I'm sure(确定)" %}" />
-    <a href="#" class="button cancel-link">{% trans "No, take me back(取消)" %}</a>
+    <input type="submit" value="{% trans "确定" %}" />
+    <a href="#" class="button cancel-link">{% trans "取消" %}</a>
     </div>
     </form>
 {% endif %}

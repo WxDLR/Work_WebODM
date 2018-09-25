@@ -16,7 +16,7 @@
             {{ SETTINGS.theme.html_after_header|safe }}
             {% block breadcrumbs %}
             <div class="breadcrumbs">
-            <a href="{% url 'admin:index' %}">{% trans 'Home(主页)' %}</a>
+            <a href="{% url 'admin:index' %}">{% trans '主页' %}</a>
             {% if title %} &rsaquo; {{ title }}{% endif %}
             </div>
             {% endblock %}

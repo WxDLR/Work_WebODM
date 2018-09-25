@@ -1,15 +1,15 @@
 {% load i18n %}
 <div class="actions">
     {% for field in action_form %}{% if field.label %}<label>{{ field.label }} {% endif %}{{ field }}{% if field.label %}</label>{% endif %}{% endfor %}
-    <button type="submit" class="button" title="{% trans "Run the selected action(运行已选择的命令)" %}" name="index" value="{{ action_index|default:0 }}">{% trans "Go(运行)" %}</button>
+    <button type="submit" class="button" title="{% trans "运行已选操作" %}" name="index" value="{{ action_index|default:0 }}">{% trans "运行" %}</button>
     {% if actions_selection_counter %}
         <span class="action-counter" data-actions-icnt="{{ cl.result_list|length }}">{{ selection_note }}</span>
         {% if cl.result_count != cl.result_list|length %}
         <span class="all">{{ selection_note_all }}</span>
         <span class="question">
-            <a href="#" title="{% trans "Click here to select the objects across all pages(点击以选择对象)" %}">{% blocktrans with cl.result_count as total_count %}Select all(选择所有的) {{ total_count }} {{ module_name }}{% endblocktrans %}</a>
+            <a href="#" title="{% trans "点击以选择对象" %}">{% blocktrans with cl.result_count as total_count %}选择所有的{{ total_count }} {{ module_name }}{% endblocktrans %}</a>
         </span>
-        <span class="clear"><a href="#">{% trans "Clear selection(清除)" %}</a></span>
+        <span class="clear"><a href="#">{% trans "清除" %}</a></span>
         {% endif %}
     {% endif %}
 </div>
