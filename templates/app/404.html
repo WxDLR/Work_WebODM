@@ -1,0 +1,11 @@
+{% extends "app/base.html" %}
+{% load settings %}
+{% block page-wrapper %}
+<div style="text-align: center;">
+    <h3>404 页面未找到</h3>
+    <h5>您确定输入了正确的网址？</h5>
+    <img src="/static/app/img/404.png" alt="404"/>
+</div>
+
+{{ SETTINGS.theme.html_after_header|safe }}
+{% endblock %}

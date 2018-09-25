@@ -1,0 +1,47 @@
+{% extends "app/logged_in_base.html" %}
+{% load i18n %}
+
+{% block content %}
+	{% load render_bundle from webpack_loader %}
+	{% render_bundle 'Dashboard' attrs='async' %}
+
+	<!--[if lte IE 8]>
+		<div class="alert alert-warning alert-dismissible">
+            WebODM cannot be used with this version of Internet Explorer. Could you please upgrade <a href="https://www.microsoft.com/en-us/download/internet-explorer.aspx">Internet Explorer</a> to the latest version or use <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>?
+        </div>
+	<![endif]-->
+
+	{% if no_processingnodes %}
+		<h3>{% trans 'Welcome!(欢迎) ☺' %}</h3>
+		{% trans 'Add a Processing Node(添加解算节点)' as add_processing_node %}
+		{% with nodeodm_link='<a href="https://github.com/pierotofy/node-OpenDroneMap" target="_blank">node-OpenDroneMap(ODM节点)</a>' api_link='<a href="https://github.com/pierotofy/node-OpenDroneMap/blob/master/docs/index.adoc" target="_blank">API</a>' %}
+			<p>
+			{% blocktrans %} 
+				To get started, "{{ add_processing_node }}". A processing node is a computer running an instance of {{ nodeodm_link }} or some other software that implements this {{ api_link }}.
+			{% endblocktrans %}
+			</p>
+		{% endwith %}
+		<button class="btn btn-primary" onclick="location.href='{% url "admin:nodeodm_processingnode_add" %}';"><i class="fa fa-plus-circle"></i> {{ add_processing_node }}</button>
+		
+	{% else %}
+		
+		{% if no_tasks %}
+			<h3>{% trans 'Welcome! ☺(欢迎)' %}</h3>
+			{% trans 'Select Images and GCP(选择图片及GCP)' as upload_images %}
+			<p>
+				{% blocktrans %} To create a map, press the(要创建一个地图，请先点击) "{{ upload_images }}" (按钮，或者拖拽图片至项目)button, or drag and drop some images into a project. {% endblocktrans %}
+			</p>
+			<p>
+				<ul>
+					<li>{% trans 'You need at least 5 images(请选择至少五张图片)' %}</li>
+					<li>{% trans 'Images must overlap by 65% or more(图片重合度至少在65%以上))' %}</li>
+					<li>{% trans 'For great 3D, images must overlap by 83%(若想获取更好的3D效果，图片重合度至少在83%以上)' %}</li>
+					<li>{% trans 'A <a href="https://github.com/OpenDroneMap/OpenDroneMap/wiki/Running-OpenDroneMap#running-odm-with-ground-control" target="_blank">GCP file(GCP文件)</a> (不是不是必须的)is optional, (但可以提高影像匹配的精准度)but can increase georeferencing accuracy' %}</li>
+				</ul>
+			</p>
+		{% endif %}
+
+		<div id="dashboard-app" data-dashboard></div>
+
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'registration/login.html' %}
+{% load i18n %}
+
+{% block registration_content %}
+    <h3>{% trans "You have been logged out.()您已登出" %}</h3>
+    <p><a href="{% url 'login' %}">{% trans 'Log In(登录)' %}</a></p>
+{% endblock %}
