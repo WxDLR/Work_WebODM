@@ -147,7 +147,7 @@ class FormDialog extends React.Component {
                   </div>
                   <div className="modal-footer">
                     <div className="pull-right">
-                        <button type="button" className="btn btn-default" onClick={this.hide} disabled={this.state.saving}>Cancel</button>
+                        <button type="button" className="btn btn-default" onClick={this.hide} disabled={this.state.saving}>取消</button>
                         <button type="button" className="btn btn-primary save" onClick={this.handleSave} disabled={this.state.saving}>
                             {this.state.saving ? 
                                 <span>

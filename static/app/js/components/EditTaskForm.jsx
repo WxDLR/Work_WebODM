@@ -450,7 +450,7 @@ class EditTaskForm extends React.Component {
           <div className="alert alert-warning">
               <div dangerouslySetInnerHTML={{__html:this.state.error}}></div>
               <button className="btn btn-sm btn-primary" onClick={this.retryLoad}>
-                <i className="fa fa-rotate-left"></i> Retry
+                <i className="fa fa-rotate-left"></i> 重试
               </button>
           </div>
         </div>);

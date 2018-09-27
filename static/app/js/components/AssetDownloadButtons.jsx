@@ -36,7 +36,7 @@ class AssetDownloadButtons extends React.Component {
 
         return (<div className={"asset-download-buttons btn-group " + (this.props.direction === "up" ? "dropup" : "")}>
           <button type="button" className={"btn btn-sm " + this.props.buttonClass} disabled={this.props.disabled} data-toggle="dropdown">
-            <i className="glyphicon glyphicon-download"></i> Download Assets
+            <i className="glyphicon glyphicon-download"></i> 下载选项
           </button>
           <button type="button" className={"btn btn-sm dropdown-toggle " + this.props.buttonClass} data-toggle="dropdown" disabled={this.props.disabled}>
                 <span className="caret"></span>

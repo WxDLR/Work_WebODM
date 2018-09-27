@@ -352,7 +352,7 @@ class ProjectListItem extends React.Component {
                       onClick={this.handleUpload}
                       ref={this.setRef("uploadButton")}>
                 <i className="glyphicon glyphicon-upload"></i>
-                Select Images and GCP
+                选择图片及GCP
               </button>
             : ""}
 
@@ -361,11 +361,11 @@ class ProjectListItem extends React.Component {
                     className={"btn btn-danger btn-sm " + (!this.state.upload.uploading ? "hide" : "")} 
                     onClick={this.cancelUpload}>
               <i className="glyphicon glyphicon-remove-circle"></i>
-              Cancel Upload
+              取消上传
             </button> 
 
             <button type="button" className="btn btn-default btn-sm" onClick={this.viewMap}>
-              <i className="fa fa-globe"></i> View Map
+              <i className="fa fa-globe"></i> 查看图片
             </button>
           </div>
 
@@ -386,7 +386,7 @@ class ProjectListItem extends React.Component {
               : ""}
 
             <i className='fa fa-edit'>
-            </i> <a href="javascript:void(0);" onClick={this.handleEditProject}> Edit
+            </i> <a href="javascript:void(0);" onClick={this.handleEditProject}> 编辑
             </a>
           </div>
         </div>

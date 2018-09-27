@@ -122,8 +122,8 @@ class NewTaskPanel extends React.Component {
           {this.state.editTaskFormLoaded ? 
             <div className="form-group">
               <div className="col-sm-offset-2 col-sm-10 text-right">
-                {this.props.onCancel !== undefined && <button type="submit" className="btn btn-danger" onClick={this.cancel} style={{marginRight: 4}}><i className="glyphicon glyphicon-remove-circle"></i> Cancel</button>}
-                <button type="submit" className="btn btn-primary" onClick={this.save}><i className="glyphicon glyphicon-saved"></i> Start Processing</button>
+                {this.props.onCancel !== undefined && <button type="submit" className="btn btn-danger" onClick={this.cancel} style={{marginRight: 4}}><i className="glyphicon glyphicon-remove-circle"></i> 取消</button>}
+                <button type="submit" className="btn btn-primary" onClick={this.save}><i className="glyphicon glyphicon-saved"></i> 开始处理</button>
               </div>
             </div>
             : ""}

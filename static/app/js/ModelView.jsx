@@ -218,7 +218,7 @@ class ModelView extends React.Component {
                                 type="checkbox" 
                                 onChange={this.toggleTexturedModel}
                                 checked={this.state.showTexturedModel}
-                              /> Textured Model</label>
+                              /> 已重构模型</label>
                     </div>
                     <AssetDownloadButtons 
                       task={this.props.task} 

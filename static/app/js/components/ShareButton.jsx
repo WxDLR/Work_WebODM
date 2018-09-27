@@ -55,7 +55,7 @@ class ShareButton extends React.Component {
           type="button"
           onClick={this.handleClick}
           className={"shareButton btn btn-sm " + (this.state.task.public ? "btn-primary" : "btn-secondary")}>
-          <i className="fa fa-share-alt"></i> Share
+          <i className="fa fa-share-alt"></i> 分享
         </button>
         {this.props.popupPlacement === 'bottom' && this.state.showPopup ? 
           popup : ""}

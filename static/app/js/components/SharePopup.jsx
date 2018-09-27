@@ -83,7 +83,7 @@ class SharePopup extends React.Component{
                   (this.state.showQR ? "btn-primary " : "btn-default ") +
                   (!this.state.task.public ? "hide" : "")}
                 onClick={this.toggleQRCode}>
-                  <i className="fa fa-qrcode"></i> QR
+                  <i className="fa fa-qrcode"></i> 二维码
             </button>
 
             <label onClick={this.handleEnableSharing}>

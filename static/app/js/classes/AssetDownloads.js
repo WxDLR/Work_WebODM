@@ -31,16 +31,16 @@ class AssetDownloadSeparator extends AssetDownload{
 const api = {
   all: function() {
     return [
-      new AssetDownload("Orthophoto (GeoTIFF)","orthophoto.tif","fa fa-map-o"),
+      new AssetDownload("正摄影像 (GeoTIFF)","orthophoto.tif","fa fa-map-o"),
       new AssetDownload("Orthophoto (PNG)","orthophoto.png","fa fa-picture-o"),
       new AssetDownload("Orthophoto (MBTiles)","orthophoto.mbtiles","fa fa-picture-o"),
       new AssetDownload("Terrain Model (GeoTIFF)","dtm.tif","fa fa-area-chart"),
-      new AssetDownload("Surface Model (GeoTIFF)","dsm.tif","fa fa-area-chart"),
-      new AssetDownload("Point Cloud (LAS)","georeferenced_model.las","fa fa-cube"),
-      new AssetDownload("Point Cloud (LAZ)","georeferenced_model.laz","fa fa-cube"),
-      new AssetDownload("Point Cloud (PLY)","georeferenced_model.ply","fa fa-cube"),
-      new AssetDownload("Point Cloud (CSV)","georeferenced_model.csv","fa fa-cube"),
-      new AssetDownload("Textured Model","textured_model.zip","fa fa-connectdevelop"),
+      new AssetDownload("表面模型 (GeoTIFF)","dsm.tif","fa fa-area-chart"),
+      new AssetDownload("点云 (LAS)","georeferenced_model.las","fa fa-cube"),
+      new AssetDownload("点云 (LAZ)","georeferenced_model.laz","fa fa-cube"),
+      new AssetDownload("点云 (PLY)","georeferenced_model.ply","fa fa-cube"),
+      new AssetDownload("点云 (CSV)","georeferenced_model.csv","fa fa-cube"),
+      new AssetDownload("已重构模型","textured_model.zip","fa fa-connectdevelop"),
       new AssetDownloadSeparator(),
       new AssetDownload("All Assets","all.zip","fa fa-file-archive-o")
     ];
