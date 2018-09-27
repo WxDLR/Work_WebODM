@@ -1,0 +1,99 @@
+.task-list-item{
+    .row{
+        margin: 0;
+        padding: 4px;
+        padding-left: 8px;
+
+        .no-padding{
+            padding: 0;
+        }
+
+        &.no-padding{
+            padding: 0;
+        }
+    }
+
+    .name{
+        padding-left: 0;
+    }
+    
+    .details{
+        font-size: 90%;
+        padding-right: 0;
+        margin-top: 4px;
+
+        i{
+            margin-left: 16px;
+            &:first-child{
+                margin-left: 4px;
+            }
+        }
+    }
+    
+    .status-icon{
+        margin-top: 3px;
+        .fa-gear{
+            width: auto;
+        }
+    }
+
+    .status-label{
+        padding: 4px;
+        width: 100%;
+        font-size: 90%;
+    }
+
+    .clickable:hover{
+        cursor: pointer;
+    }
+
+    .expanded-panel{
+        padding-top: 4px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+
+        .task-warning{
+            margin-top: 16px;
+            i.fa.fa-warning{
+                color: #ff8000;
+            }
+            span, div{
+                font-size: 13px;
+            }
+            div.inline{
+                display: inline;
+            }
+            ul{
+                margin: 8px 0;
+            }
+        }
+
+        .action-buttons{
+            button{
+                margin-right: 4px;
+            }
+
+            .btn-group{
+                button:first-child{
+                    margin-right: 0;
+                }
+            }
+
+            .edit-button{
+                margin-right: 15px;
+            }
+
+            .asset-download-buttons{
+                margin-right: 4px;
+            }
+        }
+    }
+
+    .inline-block{
+        display: inline-block;
+    }
+
+    .inline{
+        display: inline;
+    }
+}
